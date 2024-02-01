@@ -13,7 +13,27 @@ class _btnState extends State<btn> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          GestureDetector( 
+            onTap: (){},
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  
+                  Radius.circular(30), 
+                  ),
+              
+              ),
+              child: const Align(
+                child: Text('Log In',
+                 style: TextStyle(color: Colors.white,
+                  fontSize: 18,
+                 fontWeight: FontWeight.bold),)),
+            ),
+          )
+        ]
+
       ),
     );
   }
