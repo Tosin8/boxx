@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -51,12 +52,7 @@ setState(() {
             },
             
           ), 
-          Positioned(
-            top: 30, 
-            left: 3,
-            child: Container(
-              width: 100, height: 60,
-              child: Image.asset('assets/icons/logo.png'))), 
+          appLogo(), 
           const Align(
              alignment: Alignment.bottomCenter,
             
@@ -65,6 +61,9 @@ setState(() {
       )
     );
   }
+
+  
+  
   @override
   void dispose() {
     _controller.dispose();
