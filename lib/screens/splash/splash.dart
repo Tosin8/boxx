@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+import 'splash_widget.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -35,12 +37,13 @@ setState(() {
               fit: BoxFit.cover,
               child: SizedBox(
                 
-                width: _controller.value.size, 
-                height: _controller.value.size , 
+                width: _controller.value.size.width, 
+                height: _controller.value.size.height , 
                 child: VideoPlayer(_controller),
                 ),
             ),
-          )
+          ), 
+          btn(), 
         ],
       )
     );
