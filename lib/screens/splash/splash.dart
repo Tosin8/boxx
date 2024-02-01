@@ -32,20 +32,42 @@ setState(() {
     return Scaffold( 
       body: Stack(
         children: [
-          SizedBox.expand(
-            child: FittedBox(
-              fit: BoxFit.cover,
-              child: SizedBox(
+          LayoutBuilder( 
+            builder: (context, constraints) {
+              return SizedBox.expand(
+              child: FittedBox(
+                fit: BoxFit.cover,
+                child: SizedBox
                 
-                width: _controller.value.size.width, 
-                height: _controller.value.size.height , 
-                child: VideoPlayer(_controller),
-                ),
-            ),
+                (
+                  width: constraints.maxWidth * _controller.value.aspectRatio, 
+                  height: constraints.maxHeight,
+                  // width: _controller.value.size.width, 
+                  // height: _controller.value.size.height , 
+                  child: VideoPlayer(_controller),
+                  ),
+              ),
+            );
+            },
+            
           ), 
-          btn(), 
+          Positioned(
+            top: 30, 
+            left: 3,
+            child: Container(
+              width: 100, height: 60,
+              child: Image.asset('assets/icons/logo.png'))), 
+          const Align(
+             alignment: Alignment.bottomCenter,
+            
+             child: btn()), 
         ],
       )
     );
+  }
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }

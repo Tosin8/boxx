@@ -10,19 +10,18 @@ class btn extends StatefulWidget {
 class _btnState extends State<btn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
+    return  Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           GestureDetector( 
             onTap: (){},
             child: Container(
-              width: 150, 
-              height: 300,
+              width: 250, 
+              height: 50,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(
                   
-                  Radius.circular(30), 
+                  Radius.circular(8), 
                   ),
               border: Border.all(color: Colors.white), 
               ),
@@ -33,16 +32,17 @@ class _btnState extends State<btn> {
                  fontWeight: FontWeight.bold),)),
             ),
           ), 
+          SizedBox(height: 20), 
           GestureDetector( 
             onTap: (){},
             child: Container(
-              width: 150, 
-              height: 300,
+              width: 250, 
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.black,
                 borderRadius: const BorderRadius.all(
                   
-                  Radius.circular(30), 
+                  Radius.circular(8), 
                   ),
                
               ),
@@ -52,10 +52,11 @@ class _btnState extends State<btn> {
                   fontSize: 18,
                  fontWeight: FontWeight.bold),)),
             ),
-          ), 
+          ),
+          SizedBox(height: 30),  
         ]
 
-      ),
-    );
+      );
+    
   }
 }
