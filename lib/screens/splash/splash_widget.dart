@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animate_do/animate_do.dart';
 
 class btn extends StatefulWidget {
   const btn({super.key});
@@ -13,23 +14,25 @@ class _btnState extends State<btn> {
     return  Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          GestureDetector( 
-            onTap: (){},
-            child: Container(
-              width: 250, 
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(
-                  
-                  Radius.circular(8), 
-                  ),
-              border: Border.all(color: Colors.white), 
+          FadeInUp(
+            child: GestureDetector( 
+              onTap: (){},
+              child: Container(
+                width: 250, 
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(
+                    
+                    Radius.circular(8), 
+                    ),
+                border: Border.all(color: Colors.white), 
+                ),
+                child: const Align(
+                  child: Text('Log In',
+                   style: TextStyle(color: Colors.white,
+                    fontSize: 18,
+                   fontWeight: FontWeight.bold),)),
               ),
-              child: const Align(
-                child: Text('Log In',
-                 style: TextStyle(color: Colors.white,
-                  fontSize: 18,
-                 fontWeight: FontWeight.bold),)),
             ),
           ), 
           SizedBox(height: 20), 
