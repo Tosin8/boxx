@@ -50,7 +50,7 @@ class _btnState extends State<btn> {
                 width: 250, 
                 height: 50,
                 decoration: const BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.blueAccent,
                   borderRadius: BorderRadius.all(
                     
                     Radius.circular(8), 
@@ -65,7 +65,11 @@ class _btnState extends State<btn> {
               ),
             ),), 
           
-          const SizedBox(height: 30),  
+          const SizedBox(height: 20),  
+          const Text('Read our Terms & Conditions \nand Privacy Policy before you sign up', style: TextStyle(color: Colors.white, fontSize: 14, ),
+          textAlign: TextAlign.center,
+          ), 
+          const SizedBox(height: 30), 
         ]
 
     ); 
@@ -77,12 +81,18 @@ class _btnState extends State<btn> {
 
 Positioned appLogo() {
     return Positioned(
-          top: 30, 
-          left: 3,
+        bottom: 250, 
+          left: 120,
           child: FadeIn(
             duration: const Duration(milliseconds: 500),
             curve: Curves.bounceInOut, 
-            child: Container(
-              width: 100, height: 60,
-              child: Image.asset('assets/icons/logo.png')),
+            child: Column(
+              children: [
+                Container(
+                  width: 100, height: 60,
+                  child: Image.asset('assets/icons/logo.png'), 
+                  ),
+                  const Text('Your Movie Universe', style: TextStyle(color: Colors.white, fontSize: 16),textAlign: TextAlign.center,), 
+              ],
+            ),
           ));}
