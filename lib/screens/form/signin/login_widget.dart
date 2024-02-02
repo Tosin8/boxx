@@ -22,6 +22,7 @@ class _LoginFormState extends State<LoginForm> {
         child: Column(
           children: [
             TextFormField(
+              style: const TextStyle(color: Colors.white),
               controller: emailController,
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
@@ -47,7 +48,12 @@ class _LoginFormState extends State<LoginForm> {
             borderSide: const BorderSide(color: Colors.blueAccent), 
             gapPadding: 10, 
           ),
-
+          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.redAccent), 
+          borderRadius: BorderRadius.circular(20), 
+          ),
+  focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.redAccent), 
+          borderRadius: BorderRadius.circular(20), 
+          ),
               
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.8))
             ),
@@ -61,6 +67,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
             const SizedBox(height: 20), 
              TextFormField(
+              style: const TextStyle(color: Colors.white),
               obscureText: true,
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.done,
@@ -84,7 +91,13 @@ class _LoginFormState extends State<LoginForm> {
             borderSide: const BorderSide(color: Colors.blueAccent), 
             gapPadding: 10, 
           ),
-              
+              focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.redAccent), 
+          borderRadius: BorderRadius.circular(20), 
+          ),
+
+           errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.redAccent), 
+          borderRadius: BorderRadius.circular(20), 
+          ),
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.8))
             ),
             validator: (value) {
