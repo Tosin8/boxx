@@ -103,6 +103,11 @@ flutter:
     #trailer
     - assets/images/trailer.jpeg
 
+    #social_media
+    - assets/icons/apple.png
+    - assets/icons/gmail.png
+    - assets/icons/spotify.png
+
 
   #   - images/a_dot_ham.jpeg
 

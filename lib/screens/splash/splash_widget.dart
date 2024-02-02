@@ -26,7 +26,7 @@ class _btnState extends State<btn> {
             Navigator.push(context,
             PageTransition(child: const LoginScreen(), 
             type: PageTransitionType.bottomToTop, 
-            duration: Duration(milliseconds: 500), 
+            duration: const Duration(milliseconds: 500), 
             curve: Curves.easeIn));
               },
               child: FadeInUp(
@@ -58,7 +58,7 @@ class _btnState extends State<btn> {
               Navigator.push(context,
             PageTransition(child: const SignUpScreen(), 
             type: PageTransitionType.bottomToTop, 
-            duration: Duration(milliseconds: 500), 
+            duration: const Duration(milliseconds: 500), 
             curve: Curves.easeIn));
             },
             child: FadeInUp(
@@ -84,8 +84,12 @@ class _btnState extends State<btn> {
             ),), 
           
           const SizedBox(height: 20),  
-          const Text('By Signing Up, You Agree To Our Terms &\n Conditions and Privacy Policy.', style: TextStyle(color: Colors.white, fontSize: 14, ),
-          textAlign: TextAlign.center,
+          FadeIn( 
+            duration: const Duration(milliseconds: 500), 
+            delay: const Duration(milliseconds: 2000),
+            child: const Text('By Signing Up, You Agree To Our Terms &\n Conditions and Privacy Policy.', style: TextStyle(color: Colors.white, fontSize: 14, ),
+            textAlign: TextAlign.center,
+            ),
           ), 
           const SizedBox(height: 30), 
         ]

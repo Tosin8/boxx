@@ -15,6 +15,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kBkgColor,
+        leading: IconButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> const SplashScreen()));},
+         icon: const Icon(Icons.arrow_back_ios, 
+         color: Colors.white,)),
+      ),
       body: Container(
         width: double.infinity, height: double.infinity,
         decoration: const BoxDecoration(color: kBkgColor),
@@ -24,15 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 30), 
-          Padding( 
-            padding: const EdgeInsets.only(left: 0),  
-            child: IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const SplashScreen())); 
-            }, 
-            icon: const Icon(Icons.arrow_back_ios, 
-            color: Colors.white,)),
-          ), 
-          const SizedBox(height: 50), 
+          
           
           Center(child: Image.asset('assets/icons/logo.png')), 
           const SizedBox(height: 8), 
