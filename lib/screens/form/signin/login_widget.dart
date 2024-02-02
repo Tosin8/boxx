@@ -94,13 +94,21 @@ class _LoginFormState extends State<LoginForm> {
             ),
           
               const SizedBox(height: 20), 
-              Container(
-                height: 60, width: 180,
-                decoration: BoxDecoration(
-                  color: Colors.blue, 
-                  borderRadius: BorderRadius.circular(20), 
+              GestureDetector( 
+                onTap: (){
+                  if(_formKey.currentState!.validate()){
+
+                  }
+                },
+                child: Container(
+                  height: 60, width: 180,
+                  decoration: BoxDecoration(
+                    color: Colors.blue, 
+                    borderRadius: BorderRadius.circular(20), 
+                  ),
+                  child: const Align(child: Text('Log In', textAlign: TextAlign.center, 
+                  style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),)),
                 ),
-                child: const Align(child: Text('Log In', textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),)),
               )
           ],
         ),
