@@ -12,3 +12,6 @@ class MovieModel {
     
     required this.cast, required this.comments}); 
 }
+
+// data
+final forYourImages = []; 

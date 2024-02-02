@@ -66,6 +66,43 @@ flutter:
     - assets/video/bkg_video.mp4
     - assets/icons/logo.png
     
+    #actor
+    - assets/images/actor_1.jpeg
+    - assets/images/actor_1.png
+    - assets/images/actor_2.jpeg
+    - assets/images/actor_2.png
+    - assets/images/actor_3.jpeg
+    - assets/images/actor_3.png
+    - assets/images/actor_4.jpeg
+    - assets/images/actor_4.png
+    - assets/images/actor_5.jpeg
+    - assets/images/actor_5.png
+
+    #carousel
+    - assets/images/for_your_image_1.jpeg
+    - assets/images/for_your_image_2.jpeg
+    - assets/images/for_your_image_3.jpeg 
+
+    #genre
+    - assets/images/genres_1.png
+    - assets/images/genres_2.jpeg
+    - assets/images/genres_3.jpeg
+    - assets/images/genres_4.jpeg
+    - assets/images/genres_5.jpeg
+
+    #legendary movie
+    - assets/images/legendary_movie_1.jpeg
+    - assets/images/legendary_movie_2.jpeg
+
+    #popular images
+    - assets/images/popular_image_1.jpeg
+    - assets/images/popular_image_2.jpeg
+    - assets/images/popular_image_3.jpeg
+
+    #trailer
+    - assets/images/trailer.jpeg
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
