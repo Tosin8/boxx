@@ -37,7 +37,7 @@ Padding(
 ), 
 const SizedBox(height: 50), 
 
-Image.asset('assets/icons/logo.png'), 
+Center(child: Image.asset('assets/icons/logo.png')), 
 const SizedBox(height: 8), 
 const LoginForm(), 
           ],
