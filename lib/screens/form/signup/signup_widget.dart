@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignUpForm extends StatefulWidget {
+  const SignUpForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignUpForm> createState() => _SignUpFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -121,8 +120,8 @@ class _LoginFormState extends State<LoginForm> {
                     color: Colors.blue, 
                     borderRadius: BorderRadius.circular(20), 
                   ),
-                  child: const Align(child: Text('Log In', textAlign: TextAlign.center, 
-                  style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),)),
+                  child: const Align(child: Text('Create Account', textAlign: TextAlign.center, 
+                  style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),)),
                 ),
               ), 
               const SizedBox(height: 25), 
