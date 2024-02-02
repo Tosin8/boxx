@@ -47,6 +47,7 @@ class _LoginFormState extends State<LoginForm> {
             borderSide: const BorderSide(color: Colors.blueAccent), 
             gapPadding: 10, 
           ),
+
               
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.8))
             ),
@@ -56,6 +57,7 @@ class _LoginFormState extends State<LoginForm> {
               }
               return null; 
             },
+          
             ),
             const SizedBox(height: 20), 
              TextFormField(
