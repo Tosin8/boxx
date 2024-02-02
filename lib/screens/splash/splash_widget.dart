@@ -66,7 +66,7 @@ class _btnState extends State<btn> {
             ),), 
           
           const SizedBox(height: 20),  
-          const Text('Read our Terms & Conditions \nand Privacy Policy before you sign up', style: TextStyle(color: Colors.white, fontSize: 14, ),
+          const Text('By Signing Up You Agree To Our Terms &\n Conditions and Privacy Policy', style: TextStyle(color: Colors.white, fontSize: 14, ),
           textAlign: TextAlign.center,
           ), 
           const SizedBox(height: 30), 
@@ -81,7 +81,7 @@ class _btnState extends State<btn> {
 
 Positioned appLogo() {
     return Positioned(
-        bottom: 250, 
+        bottom: 230, 
           left: 120,
           child: FadeIn(
             duration: const Duration(milliseconds: 500),
@@ -89,7 +89,7 @@ Positioned appLogo() {
             child: Column(
               children: [
                 Container(
-                  width: 100, height: 60,
+                  width: 150, height: 80,
                   child: Image.asset('assets/icons/logo.png'), 
                   ),
                   const Text('Your Movie Universe', style: TextStyle(color: Colors.white, fontSize: 16),textAlign: TextAlign.center,), 
