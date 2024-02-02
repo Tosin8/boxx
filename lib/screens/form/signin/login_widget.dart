@@ -29,10 +29,12 @@ class _LoginFormState extends State<LoginForm> {
               
               prefixIcon: Padding(
                 padding: const EdgeInsets.only(left:20),
-                child: Icon(Icons.mail_outline_outlined, color: Colors.white.withOpacity(0.8),),
+                child: Icon(Icons.mail_outline_outlined, color: Colors.white.withOpacity(0.8),
+                ),
                 
               ), 
               labelText: 'Email address',
+              
               contentPadding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -48,6 +50,12 @@ class _LoginFormState extends State<LoginForm> {
               
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.8))
             ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter email';
+              }
+              return null; 
+            },
             ),
             const SizedBox(height: 20), 
              TextFormField(
@@ -77,7 +85,14 @@ class _LoginFormState extends State<LoginForm> {
               
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.8))
             ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter password';
+              }
+              return null; 
+            },
             ),
+          
               const SizedBox(height: 20), 
               Container(
                 height: 60, width: 180,
