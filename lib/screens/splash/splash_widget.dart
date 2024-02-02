@@ -1,6 +1,7 @@
 import 'package:boxx/screens/form/signin/login.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:page_transition/page_transition.dart';
 
 class btn extends StatefulWidget {
   const btn({super.key});
@@ -18,8 +19,13 @@ class _btnState extends State<btn> {
          
              GestureDetector( 
               onTap: (){
-            Navigator.push(context, 
-            MaterialPageRoute(builder: (context)=> const LoginScreen())); 
+            // Navigator.push(context, 
+            // MaterialPageRoute(builder: (context)=> const LoginScreen())); 
+            Navigator.push(context,
+            PageTransition(child: const LoginScreen(), 
+            type: PageTransitionType.bottomToTop, 
+            duration: Duration(milliseconds: 500), 
+            curve: Curves.easeIn));
               },
               child: FadeInUp(
                 delay: const Duration(milliseconds: 1000),
