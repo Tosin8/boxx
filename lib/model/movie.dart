@@ -174,9 +174,33 @@ final legendaryImages = [
 
 final genresList = [
   MovieModel(movieName: "Horror",
-   imageAsset: "assets/genres_1.png"),
-  MovieModel(movieName: "Fantasy", imageAsset: "assets/genres_2.jpeg"),
-  MovieModel(movieName: "History", imageAsset: "assets/genres_3.jpeg"),
-  MovieModel(movieName: "Detective", imageAsset: "assets/genres_4.jpeg"),
-  MovieModel(movieName: "Action", imageAsset: "assets/genres_5.jpeg"),
+   imageAsset: "assets/images/genres_1.png", 
+   movieRating: '', 
+   year: '', 
+   cast: [], 
+   comments: [], 
+   ),
+  MovieModel(
+    movieName: "Fantasy", 
+    imageAsset: "assets/images/genres_2.jpeg", 
+    movieRating: '', 
+    year: '', 
+    cast: [], 
+    comments: []),
+  MovieModel(
+    movieName: "History",
+     imageAsset: "assets/images/genres_3.jpeg", 
+     movieRating: '', 
+     year: '', 
+     cast: [],
+     comments: []),
+  MovieModel(
+    movieName: "Detective", 
+    imageAsset: "assets/images/genres_4.jpeg", 
+    movieRating: '', 
+    year: '', 
+    cast: [], comments: []),
+  MovieModel(
+    movieName: "Action", 
+    imageAsset: "assets/images/genres_5.jpeg", movieRating: '', year: '', cast: [], comments: []),
 ];
