@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:page_transition/page_transition.dart';
 
+import '../form/signup/signup.dart';
+
 class btn extends StatefulWidget {
   const btn({super.key});
 
@@ -52,7 +54,13 @@ class _btnState extends State<btn> {
           
           const SizedBox(height: 20), 
           GestureDetector( 
-            onTap: (){},
+            onTap: (){
+              Navigator.push(context,
+            PageTransition(child: const SignUpScreen(), 
+            type: PageTransitionType.bottomToTop, 
+            duration: Duration(milliseconds: 500), 
+            curve: Curves.easeIn));
+            },
             child: FadeInUp(
               delay: const Duration(milliseconds: 1500),
               duration: const Duration(milliseconds: 1000),
