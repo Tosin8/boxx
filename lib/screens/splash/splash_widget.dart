@@ -17,10 +17,10 @@ class _btnState extends State<btn> {
          
              GestureDetector( 
               onTap: (){
-              
+            
               },
               child: FadeInUp(
-                delay: const Duration(milliseconds: 500),
+                delay: const Duration(milliseconds: 1000),
                 curve: Curves.easeIn,
                  duration: const Duration(milliseconds: 1000),
                 child: Container(
@@ -46,7 +46,7 @@ class _btnState extends State<btn> {
           GestureDetector( 
             onTap: (){},
             child: FadeInUp(
-              delay: const Duration(milliseconds: 800),
+              delay: const Duration(milliseconds: 1500),
               duration: const Duration(milliseconds: 1000),
               child: Container(
                 width: 250, 
