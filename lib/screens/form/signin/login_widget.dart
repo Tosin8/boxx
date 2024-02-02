@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+
+import '../../home/home.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -112,7 +115,9 @@ class _LoginFormState extends State<LoginForm> {
               GestureDetector( 
                 onTap: (){
                   if(_formKey.currentState!.validate()){
-
+Navigator.push(context,
+ PageTransition(child: HomeScreen(),
+  type: PageTransitionType.bottomToTop));
                   }
                 },
                 child: Container(
