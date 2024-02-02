@@ -126,8 +126,32 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ), 
               const SizedBox(height: 25), 
-              const Text('- OR - ', style: TextStyle(color: Colors.white, fontSize: 18),), 
-              Row(children: [],)
+              const Text('- OR - ', 
+              style: TextStyle(color: Colors.white,
+               fontSize: 18),), 
+              SizedBox(height: 25), 
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap:() {
+                      
+                    },
+                    child: Image.asset('assets/icons/apple.png')),SizedBox(width: 20), 
+                    GestureDetector(
+                    onTap:() {
+                      
+                    },
+                    child: Image.asset('assets/icons/gmail.png')),
+                    SizedBox(width: 20), 
+                    GestureDetector(
+                    onTap:() {
+                      
+                    },
+                    child: Image.asset('assets/icons/spotify.png')),
+                ],
+                )
+             
           ],
         ),
       ),
