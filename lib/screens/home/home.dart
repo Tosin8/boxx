@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 20, fontWeight: FontWeight.w300),),
               ), 
               foryoucardsLayout(forYourImages), 
+              Row(children: buildPageIndicatorsWidget(),)
             ],
           ),
         )
@@ -82,12 +83,13 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> buildPageIndicatorsWidget() {
     List<Widget> list =[];
     for(int i = 0; i<foryouItemsList.length; i++){
-      list.add(i==currentPage ? _indicator ),
+      list.add(i == currentPage ? _indicator(true) : _indicator(false) );
     }
+    return list; 
   }
 
   Widget _indicator(bool isActive){
-    return AnimatedContainer(duration: Duration(milliseconds: 150)); 
+    return AnimatedContainer(duration: const Duration(milliseconds: 150)); 
   }
 }
 
