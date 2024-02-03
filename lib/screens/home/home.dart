@@ -50,7 +50,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 20, fontWeight: FontWeight.w300),),
               ), 
               foryoucardsLayout(forYourImages), 
-              Row(children: buildPageIndicatorsWidget(),)
+              Align(
+                alignment: Alignment.center,
+                child:                   Container(
+                  padding: const EdgeInsets.all(8.0), 
+                  decoration: BoxDecoration(
+                    color: kSearchColor,
+                     borderRadius: BorderRadius.circular(20)),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min, 
+                    children: buildPageIndicatorsWidget(),),
+                ),
+                
+              ), 
+              SizedBox(height: 10), 
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text('Popular', 
+                        
+                        style: TextStyle(color: Colors.white54, 
+                        fontSize: 20, fontWeight: FontWeight.w300),),
+                      ],
+                    ),
+                  ],
+                ),
+              ), 
             ],
           ),
         )
@@ -89,7 +117,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _indicator(bool isActive){
-    return AnimatedContainer(duration: const Duration(milliseconds: 150)); 
+    return AnimatedContainer(
+      duration:  Duration(milliseconds: 150), 
+      margin: const EdgeInsets.symmetric(horizontal: 5.0),
+      height: 8.0,
+      width: 8.0,
+      decoration:  BoxDecoration(
+        
+        color: isActive ? Colors.white : Colors.white24, borderRadius: BorderRadius.circular(20)),
+      ); 
   }
 }
 
