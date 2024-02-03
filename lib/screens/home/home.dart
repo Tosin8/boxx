@@ -2,6 +2,9 @@ import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../model/movie.dart';
+import 'home_widget.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -10,59 +13,38 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  // items
+  List<MovieModel> foryouItemsList = List.of(forYourImages);
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       backgroundColor: kBkgColor,
     body: Stack(
       children: [
         SingleChildScrollView(
-          physics: const BouncingScrollPhysics(), 
+          physics: BouncingScrollPhysics(), 
           scrollDirection: Axis.vertical, 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(padding: EdgeInsets.symmetric(vertical: 34, horizontal: 30), 
+              Padding(padding: EdgeInsets.symmetric(vertical: 34, horizontal: 30), 
               child: Row(
                 children: [
                   Text('Hi, James', style: TextStyle(color: Colors.white, fontSize: 25),)
                 ],
               ),), 
              // const SizedBox(height: 2), 
+              searchBox(),
+              SizedBox(height: 20), 
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20), 
-                child: TextFormField(
-                  textInputAction: TextInputAction.done,
-                  
-                  keyboardType: TextInputType.name,
-                  enableSuggestions: true,
-                  style: const TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    fillColor: kSearchColor, 
-                    filled: true,
-                    prefixIcon: Padding(
-                      padding: const EdgeInsets.only(left:12.0),
-                      child: Icon(FontAwesomeIcons.magnifyingGlass, color: Colors.white.withOpacity(0.6),
-                      ),
-                    ), 
-                    labelText: 'Search', 
-                    labelStyle: TextStyle(fontSize: 18, color: Colors.white.withOpacity(0.6)), 
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: const BorderSide(color: kSearchColor), 
-                gapPadding: 10, ),
-        
-                focusedBorder: OutlineInputBorder(
-            
-            borderRadius: BorderRadius.circular(20), 
-            borderSide: const BorderSide(color: kSearchColor), 
-            gapPadding: 10, 
-          ),
-                  ),
-                 
-                ),
-              ),
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
+                child: Text('For you', 
+                
+                style: TextStyle(color: Colors.white54, 
+                fontSize: 20, fontWeight: FontWeight.w300),),
+              ), 
+              foryoucardsLayout(forYourImages), 
             ],
           ),
         )
@@ -70,4 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
     );
   }
+
+  Widget foryoucardsLayout(List<MovieModel> movieList){
+    return SizedBox(); 
+  }
 }
+
