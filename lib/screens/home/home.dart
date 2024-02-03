@@ -1,6 +1,5 @@
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../model/movie.dart';
 import 'home_widget.dart';
@@ -61,6 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget foryoucardsLayout(List<MovieModel> movieList){
     return  SizedBox(
+      height: MediaQuery.of(context).size.height * 0.50,
+    
       child: PageView.builder(
         controller: pageController,
         itemCount: movieList.length,
@@ -75,6 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         ),
     ); 
+  }
+
+  // indicators
+  List<Widget> buildPageIndicatorsWidget() {
+    List<Widget> list =[];
   }
 }
 

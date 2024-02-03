@@ -16,7 +16,7 @@ class MovieModel {
 // data
 final forYourImages = [
   MovieModel(
-    imageAsset: 'assets/images/for_you_image_1.jpeg', 
+    imageAsset: 'assets/images/for_your_image_1.jpeg', 
     movieName: '', 
     movieRating: '',
      year: '', 
@@ -24,7 +24,7 @@ final forYourImages = [
      comments: []),
 
      MovieModel(
-    imageAsset: 'assets/images/for_you_image_2.jpeg', 
+    imageAsset: 'assets/images/for_your_image_2.jpeg', 
     movieName: '', 
     movieRating: '',
      year: '', 
@@ -32,7 +32,7 @@ final forYourImages = [
      comments: []),
 
      MovieModel(
-    imageAsset: 'assets/images/for_you_image_3.jpeg', 
+    imageAsset: 'assets/images/for_your_image_3.jpeg', 
     movieName: '', 
     movieRating: '',
      year: '', 
@@ -40,7 +40,7 @@ final forYourImages = [
      comments: []),
 
      MovieModel(
-    imageAsset: 'assets/images/for_you_image_4.jpeg', 
+    imageAsset: 'assets/images/for_your_image_4.jpeg', 
     movieName: '', 
     movieRating: '',
      year: '', 
