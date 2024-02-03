@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   PageController pageController = PageController(
     viewportFraction: 0.9,
      initialPage: 0 ); 
-     
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -59,7 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget foryoucardsLayout(List<MovieModel> movieList){
     return  SizedBox(
-      child: PageView.builder(itemBuilder: itemBuilder),
+      child: PageView.builder(
+        controller: pageController,
+        itemCount: movieList.length,
+        itemBuilder: (context, index) {
+          
+        }),
     ); 
   }
 }
