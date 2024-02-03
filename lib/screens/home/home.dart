@@ -81,6 +81,13 @@ class _HomeScreenState extends State<HomeScreen> {
   // indicators
   List<Widget> buildPageIndicatorsWidget() {
     List<Widget> list =[];
+    for(int i = 0; i<foryouItemsList.length; i++){
+      list.add(i==currentPage ? _indicator ),
+    }
+  }
+
+  Widget _indicator(bool isActive){
+    return AnimatedContainer(duration: Duration(milliseconds: 150)); 
   }
 }
 
