@@ -21,6 +21,34 @@ class _HomeScreenState extends State<HomeScreen> {
 
      int currentPage = 0; 
 
+      // indicators
+  List<Widget> buildPageIndicatorsWidget() {
+    List<Widget> list =[];
+    for(int i = 0; i<foryouItemsList.length; i++){
+      list.add(i == currentPage ? _indicator(true) : _indicator(false) );
+    }
+    return list; 
+  }
+
+  Widget _indicator(bool isActive){
+    return AnimatedContainer(
+      duration:  const Duration(milliseconds: 150), 
+      margin: const EdgeInsets.symmetric(horizontal: 5.0),
+      height: 8.0,
+      width: 8.0,
+      decoration:  BoxDecoration(
+        
+        color: isActive ? Colors.white : Colors.white24, borderRadius: BorderRadius.circular(20)),
+      ); 
+  }
+
+
+@override
+  void dispose() {
+   
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -63,22 +91,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 
               ), 
-              SizedBox(height: 10), 
+              const SizedBox(height: 10), 
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
                 child: Column(
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Popular', 
                         
                         style: TextStyle(color: Colors.white54, 
                         fontSize: 20, fontWeight: FontWeight.w300),),
+                        Text('See All', 
+                        
+                        style: TextStyle(color: Colors.blueAccent, 
+                        fontSize: 18, fontWeight: FontWeight.w300),),
                       ],
                     ),
                   ],
                 ),
               ), 
+              movieListBuilder(), 
             ],
           ),
         )
@@ -107,25 +141,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ); 
   }
 
-  // indicators
-  List<Widget> buildPageIndicatorsWidget() {
-    List<Widget> list =[];
-    for(int i = 0; i<foryouItemsList.length; i++){
-      list.add(i == currentPage ? _indicator(true) : _indicator(false) );
-    }
-    return list; 
-  }
-
-  Widget _indicator(bool isActive){
-    return AnimatedContainer(
-      duration:  Duration(milliseconds: 150), 
-      margin: const EdgeInsets.symmetric(horizontal: 5.0),
-      height: 8.0,
-      width: 8.0,
-      decoration:  BoxDecoration(
-        
-        color: isActive ? Colors.white : Colors.white24, borderRadius: BorderRadius.circular(20)),
-      ); 
-  }
+ 
 }
 
