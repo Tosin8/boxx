@@ -15,6 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // items
   List<MovieModel> foryouItemsList = List.of(forYourImages);
+
+  List<MovieModel> popularItemsList = List.of(popularImages);
+
   PageController pageController = PageController(
     viewportFraction: 0.9,
      initialPage: 0 ); 
@@ -112,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ), 
-              movieListBuilder(), 
+              movieListBuilder(popularImages), 
             ],
           ),
         )
@@ -126,6 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: MediaQuery.of(context).size.height * 0.50,
     
       child: PageView.builder(
+        physics: const ClampingScrollPhysics(),
         controller: pageController,
         itemCount: movieList.length,
         itemBuilder: (context, index) {
@@ -141,6 +145,23 @@ class _HomeScreenState extends State<HomeScreen> {
     ); 
   }
 
+Widget movieListBuilder(List<MovieModel> movieList){
+  return Container(
+    margin: const EdgeInsets.symmetric(
+      horizontal: 20, vertical: 10
+    ),
+    height: MediaQuery.of(context).size.height * 0.33,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: movieList.length, 
+      itemBuilder:(context, index) {
+        return CustomCard(
+          movieModel: movieList[index],); 
+        
+      },
+       ),
+  ); 
+}
  
 }
 
