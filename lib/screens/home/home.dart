@@ -16,6 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // items
   List<MovieModel> foryouItemsList = List.of(forYourImages);
+  PageController pageController = PageController(
+    viewportFraction: 0.9,
+     initialPage: 0 ); 
+     
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
