@@ -18,26 +18,26 @@ class _HomeScreenState extends State<HomeScreen> {
   List<MovieModel> foryouItemsList = List.of(forYourImages);
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return  Scaffold(
       backgroundColor: kBkgColor,
     body: Stack(
       children: [
         SingleChildScrollView(
-          physics: BouncingScrollPhysics(), 
+          physics: const BouncingScrollPhysics(), 
           scrollDirection: Axis.vertical, 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(padding: EdgeInsets.symmetric(vertical: 34, horizontal: 30), 
+              const Padding(padding: EdgeInsets.symmetric(vertical: 34, horizontal: 30), 
               child: Row(
                 children: [
                   Text('Hi, James', style: TextStyle(color: Colors.white, fontSize: 25),)
                 ],
               ),), 
              // const SizedBox(height: 2), 
-              searchBox(),
-              SizedBox(height: 20), 
-              Padding(
+              const searchBox(),
+              const SizedBox(height: 20), 
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
                 child: Text('For you', 
                 
@@ -54,7 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget foryoucardsLayout(List<MovieModel> movieList){
-    return SizedBox(); 
+    return  SizedBox(
+      child: PageView.builder(itemBuilder: itemBuilder),
+    ); 
   }
 }
 
