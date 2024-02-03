@@ -20,6 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
     viewportFraction: 0.9,
      initialPage: 0 ); 
 
+     int currentPage = 0; 
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -65,7 +67,13 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (context, index) {
           return MovieCarousel(imageAsset: movieList[index].imageAsset.toString());
 
-        }),
+        }, 
+        onPageChanged: (int page) {
+          setState(() {
+            currentPage = page; 
+          });
+        },
+        ),
     ); 
   }
 }
