@@ -63,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: pageController,
         itemCount: movieList.length,
         itemBuilder: (context, index) {
-          
+          return MovieCarousel(imageAsset: movieList[index].imageAsset.toString());
+
         }),
     ); 
   }
