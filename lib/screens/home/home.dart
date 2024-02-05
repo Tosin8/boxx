@@ -194,7 +194,12 @@ Widget genresBuilder(List<MovieModel> genresList){
     itemBuilder: (context, index) {
       return Stack(
         children: [
-          Container()
+          Container(
+            width: 250, 
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage(genresList[index].imageAsset.toString())), 
+            ),
+          )
         ],
       );
     } ),
