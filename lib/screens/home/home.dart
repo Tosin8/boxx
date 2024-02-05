@@ -192,7 +192,7 @@ Widget genresBuilder(List<MovieModel> genresList){
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
     // height: MediaQuery.of(context).size.height * 0.20,
-    height: 300,
+    height: 200,
     child: ListView.builder(
       itemCount: genresList.length, 
     shrinkWrap: true,
@@ -207,7 +207,8 @@ Widget genresBuilder(List<MovieModel> genresList){
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
                 image: AssetImage(
-                  genresList[index].imageAsset.toString())), 
+                  genresList[index].imageAsset.toString(), 
+                  ), fit: BoxFit.cover), 
             ),
             margin: const EdgeInsets.only(left: 15, right: 15, top: 8, bottom: 30), 
           ), 
