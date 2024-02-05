@@ -117,6 +117,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ), 
               movieListBuilder(popularImages), 
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Genre', 
+                        
+                        style: TextStyle(color: Colors.white54, 
+                        fontSize: 20, fontWeight: FontWeight.w300),),
+                        Text('See All', 
+                        
+                        style: TextStyle(color: Colors.blueAccent, 
+                        fontSize: 18, fontWeight: FontWeight.w300),),
+                      ],
+                    ),
+                  ],
+                ),
+              ), 
             ],
           ),
         )
