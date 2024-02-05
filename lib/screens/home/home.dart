@@ -190,14 +190,22 @@ Widget movieListBuilder(List<MovieModel> movieList){
 
 Widget genresBuilder(List<MovieModel> genresList){
   return Container(
-    child: ListView.builder(itemCount: genresList.length, 
+    margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
+     height: MediaQuery.of(context).size.height * 0.20,
+    child: ListView.builder(
+      itemCount: genresList.length, 
+    shrinkWrap: true,
+    scrollDirection: Axis.horizontal,
     itemBuilder: (context, index) {
       return Stack(
         children: [
           Container(
             width: 250, 
+          
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(genresList[index].imageAsset.toString())), 
+              image: DecorationImage(
+                image: AssetImage(
+                  genresList[index].imageAsset.toString())), 
             ),
           )
         ],
