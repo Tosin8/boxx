@@ -137,6 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ), 
+              genresBuilder(genresList), 
             ],
           ),
         )
@@ -186,3 +187,9 @@ Widget movieListBuilder(List<MovieModel> movieList){
  
 }
 
+
+Widget genresBuilder(List<MovieModel> genresList){
+  return Container(
+    
+  ); 
+}
