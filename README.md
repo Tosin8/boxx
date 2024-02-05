@@ -1,5 +1,5 @@
 # boxx
 
-A streaming app project. 
+A streaming platform app project built on flutter 
 
 ## Getting Started
