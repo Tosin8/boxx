@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<MovieModel> foryouItemsList = List.of(forYourImages);
 
   List<MovieModel> popularItemsList = List.of(popularImages);
+  List<MovieModel> genreItemList = List.of(genresList); 
 
   PageController pageController = PageController(
     viewportFraction: 0.9,
