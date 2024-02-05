@@ -190,6 +190,14 @@ Widget movieListBuilder(List<MovieModel> movieList){
 
 Widget genresBuilder(List<MovieModel> genresList){
   return Container(
+    child: ListView.builder(itemCount: genresList.length, 
+    itemBuilder: (context, index) {
+      return Stack(
+        children: [
+          Container()
+        ],
+      );
+    } ),
     
   ); 
 }
