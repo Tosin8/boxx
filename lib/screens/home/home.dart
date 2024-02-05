@@ -191,8 +191,8 @@ Widget movieListBuilder(List<MovieModel> movieList){
 Widget genresBuilder(List<MovieModel> genresList){
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
-     height: MediaQuery.of(context).size.height * 0.20,
-   // height: 300,
+    // height: MediaQuery.of(context).size.height * 0.20,
+    height: 300,
     child: ListView.builder(
       itemCount: genresList.length, 
     shrinkWrap: true,
@@ -210,7 +210,14 @@ Widget genresBuilder(List<MovieModel> genresList){
                   genresList[index].imageAsset.toString())), 
             ),
             margin: const EdgeInsets.only(left: 15, right: 15, top: 8, bottom: 30), 
-          )
+          ), 
+          Positioned(
+            bottom: 0, left: 20,
+            child: Text(genresList[index].movieName.toString(), 
+          style: TextStyle(
+            color: Colors.white,
+             fontSize: 15, 
+             fontWeight: FontWeight.bold),))
         ],
       );
     } ),
