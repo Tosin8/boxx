@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -37,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         FontAwesomeIcons.compass,
         FontAwesomeIcons.user,
       ]; 
+
   List<Widget> buildPageIndicatorsWidget() {
     List<Widget> list =[];
     for(int i = 0; i<foryouItemsList.length; i++){
@@ -173,13 +176,35 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ), 
-        Positioned(child: Container(
-          child: Row(
-            children: [
-              ...tabBarIcons.map((e) => )
-            ],
-          ),
-        )), 
+        Positioned(
+          bottom: 35,
+          left: 25, right: 25, 
+          
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: BackdropFilter( 
+              filter: ImageFilter.blur(
+                sigmaX: 25.0, sigmaY: 25.0, 
+              ), 
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: kSearchColor.withOpacity(.9), 
+                ),
+                
+                  width: MediaQuery.of(context).size.width,
+              height: 60,    
+                    child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ...tabBarIcons.map((e) => Icon(e, color: e == FontAwesomeIcons.house ? Colors.white : Colors.white54,
+                  size: 25,), 
+                  )
+                ],
+              ),
+                      ),
+            ),
+          )), 
       ],
     ),
     );
@@ -270,7 +295,8 @@ Widget movieListBuilder(List<MovieModel> movieList){
     margin: const EdgeInsets.symmetric(
       horizontal: 20, vertical: 10
     ),
-    height: MediaQuery.of(context).size.height * 0.33,
+   // height: MediaQuery.of(context).size.height * 0.33,
+   height: 300,
     child: ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: movieList.length, 
