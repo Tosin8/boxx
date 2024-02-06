@@ -1,5 +1,6 @@
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../model/movie.dart';
 import 'home_widget.dart';
@@ -26,7 +27,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
      int currentPage = 0; 
 
+
+
       // indicators
+
+      List tabBarIcons = [
+        FontAwesomeIcons.house, 
+        FontAwesomeIcons.heart,
+        FontAwesomeIcons.compass,
+        FontAwesomeIcons.user,
+      ]; 
   List<Widget> buildPageIndicatorsWidget() {
     List<Widget> list =[];
     for(int i = 0; i<foryouItemsList.length; i++){
@@ -163,7 +173,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ), 
-        Positioned(child: Container()), 
+        Positioned(child: Container(
+          child: Row(
+            children: [
+              ...tabBarIcons.map((e) => )
+            ],
+          ),
+        )), 
       ],
     ),
     );
