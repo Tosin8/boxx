@@ -177,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ), 
         Positioned(
-          bottom: 35,
+          bottom: 20,
           left: 25, right: 25, 
           
           child: ClipRRect(
@@ -194,14 +194,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 
                   width: MediaQuery.of(context).size.width,
               height: 60,    
-                    child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ...tabBarIcons.map((e) => Icon(e, color: e == FontAwesomeIcons.house ? Colors.white : Colors.white54,
-                  size: 25,), 
-                  )
-                ],
-              ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        ...tabBarIcons.map((e) => Icon(e, color: e == FontAwesomeIcons.house ? Colors.white : Colors.white54,
+                                        size: 25,), 
+                                        )
+                                      ],
+                                    ),
+                    ),
                       ),
             ),
           )), 
