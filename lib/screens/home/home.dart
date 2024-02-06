@@ -159,9 +159,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ), 
+              movieListBuilder(legendaryItemList), 
             ],
           ),
-        )
+        ), 
+        Positioned(child: Container()), 
       ],
     ),
     );
@@ -246,3 +248,22 @@ Widget genresBuilder(List<MovieModel> genresList){
     
   ); 
 }
+
+Widget movieListBuilder(List<MovieModel> movieList){
+  return Container(
+    margin: const EdgeInsets.symmetric(
+      horizontal: 20, vertical: 10
+    ),
+    height: MediaQuery.of(context).size.height * 0.33,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: movieList.length, 
+      itemBuilder:(context, index) {
+        return CustomCard(
+          movieModel: movieList[index],); 
+        
+      },
+       ),
+  ); 
+}
+ 
