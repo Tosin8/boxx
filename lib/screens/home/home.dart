@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<MovieModel> popularItemsList = List.of(popularImages);
   List<MovieModel> genreItemList = List.of(genresList); 
+  List<MovieModel> legendaryItemList = List.of(legendaryImages);
 
   PageController pageController = PageController(
     viewportFraction: 0.9,
@@ -138,6 +139,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ), 
               genresBuilder(genresList), 
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Legendary', 
+                        
+                        style: TextStyle(color: Colors.white54, 
+                        fontSize: 20, fontWeight: FontWeight.w300),),
+                        Text('See All', 
+                        
+                        style: TextStyle(color: Colors.blueAccent, 
+                        fontSize: 18, fontWeight: FontWeight.w300),),
+                      ],
+                    ),
+                  ],
+                ),
+              ), 
             ],
           ),
         )
