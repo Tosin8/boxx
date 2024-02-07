@@ -2,7 +2,8 @@ import 'package:boxx/model/movie.dart';
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:read_more_text/read_more_text.dart';
+import 'package:readmore/readmore.dart';
+
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
@@ -72,10 +73,20 @@ class _DetailScreenState extends State<DetailScreen> {
                        const SizedBox(width: 10), 
                         buildTag('Drama'), 
                     ],), 
-                    SizedBox(height: 10), 
-                    Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), 
+                    const SizedBox(height: 10), 
+                    const Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), 
                     child: ReadMoreText(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', style: TextStyle(color: Colors.white70, height: 1.5, fontWeight: FontWeight.w500), numLines: null, readMoreText: '', readLessText: '', 
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
+                      trimLines: 2,
+                      trimMode: TrimMode.Line,
+                      trimCollapsedText: 'Show more', 
+                      trimExpandedText: 'Show less',
+                    
+                      
+                       style: TextStyle(color: Colors.white70, height: 1.5,
+                       fontWeight: FontWeight.w500),
+                     
+                     
                     ),
                     ), 
 
