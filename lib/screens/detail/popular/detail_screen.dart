@@ -2,6 +2,7 @@ import 'package:boxx/model/movie.dart';
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:read_more_text/read_more_text.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
@@ -39,7 +40,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child:  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -66,7 +67,17 @@ class _DetailScreenState extends State<DetailScreen> {
                   
                     Row(children: [
                       buildTag('Epic'), 
-                    ],)
+                      const SizedBox(width: 10,), 
+                       buildTag('Fantasy'), 
+                       const SizedBox(width: 10), 
+                        buildTag('Drama'), 
+                    ],), 
+                    SizedBox(height: 10), 
+                    Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), 
+                    child: ReadMoreText(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', style: TextStyle(color: Colors.white70, height: 1.5, fontWeight: FontWeight.w500), numLines: null, readMoreText: '', readLessText: '', 
+                    ),
+                    ), 
 
                 ]  )
              ) ],)
@@ -82,7 +93,7 @@ class _DetailScreenState extends State<DetailScreen> {
       decoration: BoxDecoration(
         color: kSearchColor, borderRadius: BorderRadius.circular(18), 
       ),
-      child: Text(title,style: TextStyle(color: Colors.white, fontSize: 16),),
+      child: Text(title,style: const TextStyle(color: Colors.white, fontSize: 16),),
     ); 
   }
 }
