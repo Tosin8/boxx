@@ -1,6 +1,7 @@
 import 'package:boxx/model/movie.dart';
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
@@ -38,21 +39,37 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Dune', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w600),), 
-                      SizedBox(height: 5,),
-                      Text('2021, Denis Villenueve', style: TextStyle(color: Colors.white54, fontSize: 20, fontWeight: FontWeight.w600
-                      ),
-                      ),
-                    ]),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                          Text('Dune', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w600),), 
+                          SizedBox(height: 5,),
+                          Text('2021, Denis Villenueve', style: TextStyle(color: Colors.white54, fontSize: 20, fontWeight: FontWeight.w600
+                          ),
+                          ),
+                         
+                        ]),
+                        Row(
+                          children: [
+                            Text('8.2', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600),),
+                            SizedBox(width: 10), 
+                            Icon(FontAwesomeIcons.solidStar, color: Colors.yellow,size: 15,)
+                          ],
+                        )
+                    ],
+                  ),
                   
                     
 
-                )
-              ],
-            ),
-          )
-        ],
-      )
-    );
+                ]  )
+             ) ],)
+     ) ]),
+          );
+        
+      
+    
   }
 }
