@@ -1,4 +1,5 @@
 import 'package:boxx/model/movie.dart';
+import 'package:boxx/screens/detail/popular/detail_screen_widget.dart';
 import 'package:boxx/widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -91,7 +92,7 @@ class _DetailScreenState extends State<DetailScreen> {
                      
                     ),
                     ), 
-                    
+                    CastAndCrew(casts: popularItems[0].cast!)
 
                 ]  )
              ) ],)
