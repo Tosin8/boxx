@@ -93,11 +93,27 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     ), 
                     CastAndCrew(casts: popularItems[0].cast!), 
-                    const Padding(padding: EdgeInsets.symmetric(horizontal: 10.0), 
+                    Padding(padding: const EdgeInsets.symmetric(horizontal: 10.0), 
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Trailer', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),)
+                        const Text('Trailer', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),), 
+                        Stack(
+                          alignment: Alignment.center, 
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only(top: 20),
+                              height: 180,
+                              width: double.infinity,
+                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), image: const DecorationImage(image: AssetImage('assets/images/trailer.jpeg'), fit: BoxFit.cover)),
+                            ), 
+                            Container(
+                              padding: const EdgeInsets.all(8), 
+                              decoration: const BoxDecoration(shape: BoxShape.circle,  color: Colors.white),
+                              child: Icon(FontAwesomeIcons.play, color: kButtonColor.withOpacity(0.8),size: 20,),
+                            )
+                          ],
+                        ), 
                       ],
                     ),
                     ),
