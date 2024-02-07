@@ -196,7 +196,13 @@ class _DetailScreenState extends State<DetailScreen> {
         itemCount: popularItems[0].comments!.length, 
         itemBuilder: (context, index){
           return Container(
-            width: 300, decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+            width: 300, decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: kSearchColor), margin: const EdgeInsets.only(right: 15), padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
+            children: [
+Row(
+  mainAxisAlignment: MainAxisAlignment.start, children: [Container(height: 50, width: 50, decoration: BoxDecoration(shape: BoxShape.circle, image: DecorationImage(image: AssetImage(popularItems[0].comments![index]['imageUrl'].toString()))),)],
+)
+            ],),
           ); 
         }),
     ); 
