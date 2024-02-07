@@ -35,7 +35,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ), 
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 12.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
