@@ -12,6 +12,7 @@ class CastAndCrew extends StatelessWidget {
         vertical: 20, 
         horizontal: 10),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text('Cast', style: TextStyle(
             color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600, 
@@ -36,12 +37,19 @@ class CastAndCrew extends StatelessWidget {
       width: 80, child: Column(
         children: [
           Container(
+
             height: 100, 
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), 
-            image: DecorationImage(image: AssetImage(cast['image'], 
+            image: DecorationImage(
+              image: AssetImage(cast['image'], 
             ), fit: BoxFit.cover)),
           ), 
-          const SizedBox(height: 10,), Text(cast['name'], maxLines: 2, textAlign: TextAlign.left, style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w400),)
+          const SizedBox(height: 10,), 
+          Text(cast['name'], maxLines: 2, 
+          textAlign: TextAlign.left, 
+          style: const TextStyle(
+            color: Colors.white70,
+             fontWeight: FontWeight.w400),)
         ],
       ),
     ); 
