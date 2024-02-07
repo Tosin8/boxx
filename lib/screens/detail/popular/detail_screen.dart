@@ -78,7 +78,11 @@ class _DetailScreenState extends State<DetailScreen> {
   }
   Widget buildTag(String title) {
     return Container(
-      
+      margin: const EdgeInsets.only(top: 20), padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20), 
+      decoration: BoxDecoration(
+        color: kSearchColor, borderRadius: BorderRadius.circular(18), 
+      ),
+      child: Text(title,style: TextStyle(color: Colors.white, fontSize: 16),),
     ); 
   }
 }
