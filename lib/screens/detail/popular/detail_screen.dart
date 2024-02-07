@@ -92,7 +92,15 @@ class _DetailScreenState extends State<DetailScreen> {
                      
                     ),
                     ), 
-                    CastAndCrew(casts: popularItems[0].cast!)
+                    CastAndCrew(casts: popularItems[0].cast!), 
+                    const Padding(padding: EdgeInsets.symmetric(horizontal: 10.0), 
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Trailer', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),)
+                      ],
+                    ),
+                    ),
 
                 ]  )
              ) ],)
