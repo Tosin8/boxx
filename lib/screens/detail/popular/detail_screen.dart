@@ -36,7 +36,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ), 
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: const Column(
+                  child:  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
@@ -59,11 +59,14 @@ class _DetailScreenState extends State<DetailScreen> {
                             SizedBox(width: 10), 
                             Icon(FontAwesomeIcons.solidStar, color: Colors.yellow,size: 15,)
                           ],
-                        )
+                        ), 
+                       
                     ],
                   ),
                   
-                    
+                    Row(children: [
+                      buildTag('Epic'), 
+                    ],)
 
                 ]  )
              ) ],)
@@ -72,5 +75,10 @@ class _DetailScreenState extends State<DetailScreen> {
         
       
     
+  }
+  Widget buildTag(String title) {
+    return Container(
+      
+    ); 
   }
 }
