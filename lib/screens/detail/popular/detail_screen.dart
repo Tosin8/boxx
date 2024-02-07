@@ -81,6 +81,8 @@ class _DetailScreenState extends State<DetailScreen> {
                       trimMode: TrimMode.Line,
                       trimCollapsedText: 'Show more', 
                       trimExpandedText: 'Show less',
+                      moreStyle: TextStyle(color: kButtonColor),
+                      lessStyle: TextStyle(color: kButtonColor),
                     
                       
                        style: TextStyle(color: Colors.white70, height: 1.5,
@@ -89,6 +91,7 @@ class _DetailScreenState extends State<DetailScreen> {
                      
                     ),
                     ), 
+                    
 
                 ]  )
              ) ],)
