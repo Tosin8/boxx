@@ -35,19 +35,20 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ), 
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 12.0),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                          Text('Dune', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w600),), 
+                          Text('Dune', style: TextStyle(color: Colors.white, fontSize: 25,  fontWeight: FontWeight.w600),), 
                           SizedBox(height: 5,),
-                          Text('2021, Denis Villenueve', style: TextStyle(color: Colors.white54, fontSize: 20, fontWeight: FontWeight.w600
+                          Text('2021, Denis Villenueve', style: TextStyle(color: Colors.white54, fontSize: 15, fontWeight: FontWeight.w600
                           ),
                           ),
                          
