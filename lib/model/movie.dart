@@ -57,33 +57,33 @@ final popularImages = [
         {
           "name": "Timothee Chalamet",
           "role": "Paul Atreides",
-          "image": "assets/actor_1.jpeg",
+          "image": "assets/images/actor_1.jpeg",
         },
         {
           "name": "Zendaya",
           "role": "Chani",
-          "image": "assets/actor_2.jpeg",
+          "image": "assets/images/actor_2.jpeg",
         },
         {
           "name": "Rebecca Ferguson",
           "role": "Lady Jessica",
-          "image": "assets/actor_3.jpeg",
+          "image": "assets/images/actor_3.jpeg",
         },
         {
           "name": "Oscar Isaac",
           "role": "Duke Leto",
-          "image": "assets/actor_4.jpeg",
+          "image": "assets/images/actor_4.jpeg",
         },
         {
           "name": "Jaon Momoa",
           "role": "Duncan Idaho",
-          "image": "assets/actor_5.jpeg",
+          "image": "assets/images/actor_5.jpeg",
         },
       ],
       comments: [
         {
           "name": "Cody Fisher",
-          "imageUrl": "assets/actor_1.png",
+          "imageUrl": "assets/images/actor_1.png",
           "date": "June 14, 2022",
           "rating": "5.0",
           "comment":
@@ -91,14 +91,14 @@ final popularImages = [
         },
         {
           "name": "Theresa Webb",
-          "imageUrl": "assets/actor_2.png",
+          "imageUrl": "assets/images/actor_2.png",
           "date": "Aug 2, 2021",
           "rating": "4.0",
           "comment": "Not a bad movie, but not much impressed"
         },
         {
           "name": "Caitriona Balfe",
-          "imageUrl": "assets/actor_3.png",
+          "imageUrl": "assets/images/actor_3.png",
           "date": "June 26, 2020",
           "rating": "4.8",
           "comment": "Love the way it is designed."
