@@ -126,7 +126,9 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                       Text('See all', style: TextStyle(color: kButtonColor, fontSize: 18, fontWeight: FontWeight.w400),)
                       ],
-                      )],
+                      ), 
+                      buildCommentCard(), 
+                      ],
                       ),
                       )
 
