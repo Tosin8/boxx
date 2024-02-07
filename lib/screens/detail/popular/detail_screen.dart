@@ -200,7 +200,34 @@ class _DetailScreenState extends State<DetailScreen> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
             children: [
 Row(
-  mainAxisAlignment: MainAxisAlignment.start, children: [Container(height: 50, width: 50, decoration: BoxDecoration(shape: BoxShape.circle, image: DecorationImage(image: AssetImage(popularItems[0].comments![index]['imageUrl'].toString()))),)],
+  mainAxisAlignment: MainAxisAlignment.start, 
+  children: [
+    Container(
+      height: 50,
+       width: 50,
+     decoration: BoxDecoration(
+      
+      shape: BoxShape.circle,
+       image: DecorationImage(
+        image: AssetImage(
+          popularItems[0].comments![index]['imageUrl'].toString()
+          )
+          )
+          ),
+          ), const SizedBox(width: 10,), 
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start, 
+            children: [
+            Text(popularItems[0].comments![index]['name'], 
+            style: const TextStyle(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+              ), 
+              const SizedBox(height: 5,),
+               Text(popularItems[0].comments![index]['date'],
+                style: const TextStyle(color: Colors.white60),)
+              ],
+              )
+          ],
 )
             ],),
           ); 
