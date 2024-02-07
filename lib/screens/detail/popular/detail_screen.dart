@@ -196,8 +196,13 @@ class _DetailScreenState extends State<DetailScreen> {
         itemCount: popularItems[0].comments!.length, 
         itemBuilder: (context, index){
           return Container(
-            width: 300, decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: kSearchColor), margin: const EdgeInsets.only(right: 15), padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, 
+            width: 300,
+             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20), 
+             color: kSearchColor),
+              margin: const EdgeInsets.only(right: 15), padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start, 
             children: [
 Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -242,13 +247,25 @@ children: [
   style: const TextStyle(
     color: Colors.white,
      fontWeight: FontWeight.bold),), const SizedBox(width: 4,),
-      const Icon(FontAwesomeIcons.solidStar,
-       color: Colors.yellow, size: 15,)
+
+      const Icon(
+        FontAwesomeIcons.solidStar,
+       color: Colors.yellow,
+        size: 15,)
 ],)
             ],),
-         ] )
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10), 
+              child: Text(popularItems[0].comments![index]['comment'], 
+              maxLines: 3,
+              textAlign: TextAlign.left, overflow: TextOverflow.clip,
+              style: TextStyle(color: Colors.white),),)
+         ]
+          )
         ); 
-  }));
+  },
+  )
+  );
   }
 }
   
