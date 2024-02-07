@@ -118,7 +118,17 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     ),
                     const SizedBox(height: 30,), 
-                    const Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('Comments', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w400),)],)],),)
+                    const Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: 
+                    [Text('Comments',
+                     style: TextStyle(
+                      color: Colors.white, 
+                      fontSize: 20, fontWeight: FontWeight.w400),
+                      ),
+                      Text('See all', style: TextStyle(color: kButtonColor, fontSize: 18, fontWeight: FontWeight.w400),)
+                      ],
+                      )],
+                      ),
+                      )
 
                 ]  )
              ) ],)
