@@ -118,7 +118,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     ),
                     const SizedBox(height: 30,), 
-                    const Padding(padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: 
+                     Padding(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [const Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: 
                     [Text('Comments',
                      style: TextStyle(
                       color: Colors.white, 
@@ -128,13 +128,50 @@ class _DetailScreenState extends State<DetailScreen> {
                       ],
                       ), 
                       buildCommentCard(), 
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.15,
+                      )
                       ],
                       ),
                       )
 
-                ]  )
-             ) ],)
-     ) ]),
+                ]  ,
+                ),
+             ),
+              ],
+             )
+     ), 
+     Positioned(
+      top: 40, right: 20, 
+      child: Container(
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle, color: Colors.white70
+        ),
+        child: IconButton(
+          onPressed: (){
+            Navigator.pop(context); },
+           icon: const Icon(
+            FontAwesomeIcons.xmark,
+             color: kSearchColor,
+             size: 20,)),)), 
+            
+             Positioned(
+              bottom: 30,
+      left: 30, right: 30, 
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          height: 70,
+          color: kButtonColor, 
+          alignment: Alignment.center,
+          
+          child: const Text('Watch Movie', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),), 
+      )), 
+       ) ], 
+    
+
+     ),
+     
           );
         
       
@@ -147,6 +184,21 @@ class _DetailScreenState extends State<DetailScreen> {
         color: kSearchColor, borderRadius: BorderRadius.circular(18), 
       ),
       child: Text(title,style: const TextStyle(color: Colors.white, fontSize: 16),),
+    ); 
+  }
+
+  Widget buildCommentCard() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 20), 
+      height: 160,
+       child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: popularItems[0].comments!.length, 
+        itemBuilder: (context, index){
+          return Container(
+            width: 300, decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+          ); 
+        }),
     ); 
   }
 }
