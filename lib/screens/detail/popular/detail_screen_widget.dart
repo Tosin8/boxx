@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CastAndCrew extends StatelessWidget {
-  const CastAndCrew({super.key});
+
+  final List cast; 
+  const CastAndCrew({super.key, required this.cast});
 
   @override
   Widget build(BuildContext context) {
